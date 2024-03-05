@@ -87,10 +87,12 @@ export const RegisterForm = () => {
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
                                     <FormControl>
+                                    <div className="flex justify-center">
                                         <TelInput
                                             {...field}
                                             disabled={isPending}
                                         />
+                                        </div>
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -103,7 +105,9 @@ export const RegisterForm = () => {
                                 <FormItem>
                                     <FormLabel>Password</FormLabel>
                                     <FormControl>
+                                    <div className="flex justify-center">
                                         <PasswordInput {...field} placeholder="Password" disabled={isPending} />
+                                   </div>
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>

@@ -108,11 +108,13 @@ export const LoginForm = () => {
                                     render={({ field }) => (
                                         <FormItem>
                                             <FormLabel>Email</FormLabel>
-                                            <FormControl>
-                                                <TelInput
-                                                    {...field}
-                                                    disabled={isPending}
-                                                />
+                                            <FormControl >
+                                                <div className="flex justify-center">
+                                                    <TelInput
+                                                        {...field}
+                                                        disabled={isPending}
+                                                    />
+                                                </div>
                                             </FormControl>
                                             <FormMessage />
                                         </FormItem>
@@ -125,7 +127,9 @@ export const LoginForm = () => {
                                         <FormItem>
                                             <FormLabel>Password</FormLabel>
                                             <FormControl>
+                                            <div className="flex justify-center">
                                                 <PasswordInput {...field} placeholder="Password" disabled={isPending} />
+                                           </div>
                                             </FormControl>
                                             <Button
                                                 size="sm"
