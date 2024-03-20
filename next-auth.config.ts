@@ -3,6 +3,8 @@ import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
+import tiktok from "next-auth/providers/tiktok";
+
 
 import { LoginSchema } from "@/schemas";
 import { getUserByEmail } from "@/data/user";
@@ -16,6 +18,10 @@ export default {
           Github({
             clientId: process.env.GITHUB_CLIENT_ID,
             clientSecret: process.env.GITHUB_CLIENT_SECRET,
+          }),
+          tiktok({
+            clientId: process.env.TIKTOK_CLIENT_ID,
+            clientSecret: process.env.TIKTOK_CLIENT_SECRET,
           }),
     Credentials({
       async authorize(credentials) {
