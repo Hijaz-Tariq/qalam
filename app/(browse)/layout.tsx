@@ -13,9 +13,19 @@ const BrowseLayout = ({
             <Navbar />
             <div className="flex h-full pt-20">
                 <Container>
-            <Banner
-          label="تنويه: الموقع ما زال قيد التطوير , نرجوا محادثتنا في حال واجهتك اي مشكلة"
-        />
+                    <Banner
+                        label="تنويه: الموقع ما زال قيد التطوير , نرجوا محادثتنا في حال واجهتك اي مشكلة"
+                    />
+
+                    <div className="flex justify-between p-5">
+                        <a href="./terms/">
+                            شروط الاستخدام
+                        </a>
+                        <a href="./policy/">
+                            سياسة الخصوصية
+                        </a>
+                    </div>
+
                     {children}
                 </Container>
             </div>
