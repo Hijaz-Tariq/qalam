@@ -71,7 +71,7 @@ export const LoginForm = () => {
     return (
         <CardWrapper
             headerLabel="الدخول الى الحساب"
-            backButtonLabel="Don't have an account?"
+            backButtonLabel="ليس لديك حساب؟ تسجيل حساب جديد"
             backButtonHref="/auth/register"
             showSocial
         >
@@ -107,11 +107,12 @@ export const LoginForm = () => {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Email</FormLabel>
+                                            <FormLabel>الايميل</FormLabel>
                                             <FormControl >
                                                 <div className="flex justify-center">
                                                     <TelInput
                                                         {...field}
+                                                        placeholder="user@e-qalam.com"
                                                         disabled={isPending}
                                                     />
                                                 </div>
@@ -125,11 +126,11 @@ export const LoginForm = () => {
                                     name="password"
                                     render={({ field }) => (
                                         <FormItem>
-                                            <FormLabel>Password</FormLabel>
+                                            <FormLabel>كلمة المرور</FormLabel>
                                             <FormControl>
-                                            <div className="flex justify-center">
-                                                <PasswordInput {...field} placeholder="Password" disabled={isPending} />
-                                           </div>
+                                                <div className="flex justify-center">
+                                                    <PasswordInput {...field} placeholder="******" disabled={isPending} />
+                                                </div>
                                             </FormControl>
                                             <Button
                                                 size="sm"
@@ -138,7 +139,7 @@ export const LoginForm = () => {
                                                 className="px-0 font-normal"
                                             >
                                                 <Link href="/auth/reset">
-                                                    Forgot password?
+                                                نسيت كلمة المرور
                                                 </Link>
                                             </Button>
                                             <FormMessage />
@@ -155,7 +156,7 @@ export const LoginForm = () => {
                         type="submit"
                         className="w-full"
                     >
-                        {showTwoFactor ? "Confirm" : "Login"}
+                       {showTwoFactor ? "تأكيد" : "دخول"}
                     </Button>
                 </form>
             </Form>

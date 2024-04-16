@@ -52,10 +52,10 @@ export const RegisterForm = () => {
 
     return (
         <CardWrapper
-            headerLabel="حساب جديد"
-            backButtonLabel="Already have an account?"
-            backButtonHref="/auth/login"
-            showSocial
+        headerLabel="حساب جديد"
+        backButtonLabel="قمت بالتسجيل سابقاً"
+        backButtonHref="/auth/login"
+        showSocial
         >
             <Form {...form}>
                 <form
@@ -68,12 +68,12 @@ export const RegisterForm = () => {
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Name</FormLabel>
+                                    <FormLabel>الإسم:</FormLabel>
                                     <FormControl>
                                         <Input
                                             {...field}
                                             disabled={isPending}
-                                            placeholder="john.doe"
+                                            placeholder="الاسم يجب ان يكون حقيقي"
                                         />
                                     </FormControl>
                                     <FormMessage />
@@ -85,11 +85,12 @@ export const RegisterForm = () => {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Email</FormLabel>
+                                    <FormLabel>الايميل</FormLabel>
                                     <FormControl>
                                     <div className="flex justify-center">
                                         <TelInput
                                             {...field}
+                                            placeholder="New_User@e-qalam.com"
                                             disabled={isPending}
                                         />
                                         </div>
@@ -103,10 +104,10 @@ export const RegisterForm = () => {
                             name="password"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Password</FormLabel>
+                                    <FormLabel>كلمة المرور</FormLabel>
                                     <FormControl>
                                     <div className="flex justify-center">
-                                        <PasswordInput {...field} placeholder="Password" disabled={isPending} />
+                                        <PasswordInput {...field} placeholder="******" disabled={isPending} />
                                    </div>
                                     </FormControl>
                                     <FormMessage />
