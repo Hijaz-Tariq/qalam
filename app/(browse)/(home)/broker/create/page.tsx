@@ -30,7 +30,7 @@ const formSchema = z.object({
 const codeUrl = uuidv4();
 const QRCreatePage = () => {
   const router = useRouter();
-  const  user  = useCurrentUser();
+  const user = useCurrentUser();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
