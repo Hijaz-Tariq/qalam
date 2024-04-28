@@ -45,7 +45,7 @@ const QRCreatePage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const title = parseFloat(values.title);
-      const websiteLink = "http://192.168.1.107:3000/broker/scan";
+      const websiteLink = "http://e-qalam.com/broker/scan";
       if (!isNaN(title) && user) {
 
         const qrCodeData = {
